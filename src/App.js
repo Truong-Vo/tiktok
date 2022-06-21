@@ -5,7 +5,7 @@ import DefaultLayout from './components/Layouts/DefaultLayout/DefaultLayout';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div>
                 <Routes>
                     {publicRoutes.map((route, index) => {
@@ -20,6 +20,7 @@ function App() {
                             <Route
                                 key={index}
                                 path={route.path}
+                                exact
                                 element={
                                     <Layout>
                                         <route.component />
