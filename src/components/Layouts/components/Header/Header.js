@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper/Popper';
 import AccountItem from '~/components/AccountItem/AccountItem';
+import Button from '~/components/Button/Button';
 
 const cx = classNames.bind(styles);
 
@@ -65,7 +66,9 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('actions')}></div>
+                <div className={cx('actions')}>
+                    <Button primary>Log in</Button>
+                </div>
             </div>
         </header>
     );
